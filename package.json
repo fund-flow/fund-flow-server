@@ -12,16 +12,16 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/node": "^22.13.1",
     "nodemon": "^3.1.9",
     "typescript": "^5.7.3"
   },
   "dependencies": {
+    "@cowprotocol/cow-sdk": "^5.10.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
-    "ethers": "^6.13.5",
-    "ethers-multicall": "^0.2.3",
     "express": "^4.21.2",
     "fs": "^0.0.1-security",
     "path": "^0.12.7",
