@@ -1,0 +1,31 @@
+{
+  "name": "fund-flow-server",
+  "version": "1.0.0",
+  "description": "Fund Flow Server",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "dev": "tsc && nodemon dist/index.js",
+    "reinstall": "rm -rf dist && rm -rf node_modules && rm package-lock.json && npm i",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.1",
+    "nodemon": "^3.1.9",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "ethers": "^6.13.5",
+    "ethers-multicall": "^0.2.3",
+    "express": "^4.21.2",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "ts-node": "^10.9.2",
+    "viem": "^2.22.23"
+  }
+}
