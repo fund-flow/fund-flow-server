@@ -53,6 +53,7 @@ export const PRIVY_APP_SECRET = process.env.PRIVY_APP_SECRET as string;
 // COW PROTOCOL CONFIGS
 export const COW_APP_CODE = process.env.APP_CODE as string;
 
-// PERSONAL CONFIGS
-export const PRIVATE_KEY = process.env.PRIVATE_KEY as string;
-export const WALLET_ADDRESS = process.env.WALLET_ADDRESS as string;
+// Personal Configs
+export const RPC_URL = process.env.RPC_URL as string;
+export const AGENT_WALLET_ADDRESS = process.env.AGENT_WALLET_ADDRESS as string;
+export const AGENT_WALLET_ID = process.env.AGENT_WALLET_ID as string;

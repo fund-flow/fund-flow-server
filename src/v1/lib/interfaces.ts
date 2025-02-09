@@ -3,6 +3,7 @@
 ////////////////////////
 
 export interface AllocationPayload {
+  userWalletAddress: string;
   assets: string[];
   allocations: number[];
   analysis: {
@@ -54,6 +55,24 @@ export interface TransactionResponse {
 export interface EthereumMessageParams {
   walletId: string;
   message: string;
+}
+
+export interface EthereumTypedDataParams {
+  walletId: string;
+  typedData: {
+    domain: {
+      name: string;
+      version: string;
+      chainId: number;
+      verifyingContract: string;
+      [key: string]: any;
+    };
+    types: {
+      [key: string]: Array<{ name: string; type: string }>;
+    };
+    message: Record<string, any>;
+    primaryType: string;
+  };
 }
 
 export interface EthereumTransactionSignParams {

@@ -2,7 +2,6 @@
 
 - Privy Server Wallet
 - CoW Swap
-- Morpho Lending
 
 ## Example usage
 
