@@ -51,3 +51,17 @@ curl --location 'http://localhost:3050/api/v1/swap' \
     }
 }'
 ```
+
+## Running the server
+
+```bash
+npm install
+```
+
+```bash
+npm run build
+```
+
+```bash
+npm run start
+```
