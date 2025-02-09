@@ -2,11 +2,15 @@ import {
   OrderBookApi,
   OrderKind,
   OrderQuoteSideKindSell,
-  SupportedChainId,
   TradeParameters,
   TradingSdk,
 } from "@cowprotocol/cow-sdk";
-import { BASE_MAINNET } from "../lib/constants";
+import {
+  BASE_MAINNET,
+  COW_APP_CODE,
+  PRIVATE_KEY,
+  WALLET_ADDRESS,
+} from "../lib/constants";
 import { AllocationPayload } from "../lib/interfaces";
 import { getTokenInfo } from "../helpers/getTokenInfo";
 
@@ -16,23 +20,19 @@ export class SwapService {
   private walletAddress: string;
 
   constructor() {
-    if (
-      !process.env.PRIVATE_KEY ||
-      !process.env.APP_CODE ||
-      !process.env.WALLET_ADDRESS
-    ) {
+    if (!PRIVATE_KEY || !COW_APP_CODE || !WALLET_ADDRESS) {
       throw new Error(
         "PRIVATE_KEY, APP_CODE, and WALLET_ADDRESS environment variables are required"
       );
     }
 
-    this.walletAddress = process.env.WALLET_ADDRESS;
+    this.walletAddress = WALLET_ADDRESS;
 
     // Initialize SDK with Base mainnet
     this.sdk = new TradingSdk({
       chainId: BASE_MAINNET.CHAIN_ID,
-      signer: process.env.PRIVATE_KEY,
-      appCode: process.env.APP_CODE,
+      signer: PRIVATE_KEY,
+      appCode: COW_APP_CODE,
     });
 
     this.orderBookApi = new OrderBookApi({ chainId: BASE_MAINNET.CHAIN_ID });

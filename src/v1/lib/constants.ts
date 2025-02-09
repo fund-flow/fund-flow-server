@@ -1,3 +1,8 @@
+import dotenv from "dotenv";
+
+dotenv.config();
+
+// BASE TOKEN CONFIGS
 export const BASE_MAINNET = {
   // Token Addresses on Base Mainnet
   TOKENS: {
@@ -41,5 +46,13 @@ export const BASE_MAINNET = {
   CHAIN_ID: 8453,
 };
 
+// PRIVY CONFIGS
+export const PRIVY_APP_ID = process.env.PRIVY_APP_ID as string;
+export const PRIVY_APP_SECRET = process.env.PRIVY_APP_SECRET as string;
 
+// COW PROTOCOL CONFIGS
+export const COW_APP_CODE = process.env.APP_CODE as string;
 
+// PERSONAL CONFIGS
+export const PRIVATE_KEY = process.env.PRIVATE_KEY as string;
+export const WALLET_ADDRESS = process.env.WALLET_ADDRESS as string;
