@@ -3,6 +3,7 @@
 ////////////////////////
 
 export interface AllocationPayload {
+  userWallet: string;
   assets: string[];
   allocations: number[];
   analysis: {
